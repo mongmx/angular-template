@@ -1,4 +1,11 @@
-var app = angular.module('theAppName', ['ui.router', 'about', 'contact', 'home']);
+var app = angular.module('theAppName', [
+	'ui.bootstrap', 
+	'ui.router',
+	'about',
+	'bug', 
+	'contact', 
+	'home'
+]);
 
 app.config([
 	'$urlRouterProvider', 
@@ -17,6 +24,11 @@ app.config([
 			templateUrl: 'templates/about.html',
 			controller: 'AboutController'
 		})
+		.state('bug', {
+			url: '/bug',
+			templateUrl: 'templates/bug.html',
+			controller: 'BugController'
+		})
 		.state('contact', {
 			url: '/contact',
 			templateUrl: 'templates/contact.html',
@@ -25,6 +37,11 @@ app.config([
 	}
 ]);
 
-app.controller('MainController', ['$scope', function($scope){
-	$scope.appName = 'Angular Template';
+app.run(function ($rootScope) {
+	$rootScope.appName = 'Ng App Template';
+	$rootScope.endPoint = 'http://localhost:3004/';
+});
+
+app.controller('MainController', ['$scope', '$rootScope', function($scope, $rootScope){
+	$scope.appTitle = $rootScope.appName;
 }])

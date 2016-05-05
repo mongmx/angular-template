@@ -1,0 +1,29 @@
+<h1>{{title}}</h1>
+<div class="panel panel-default">
+	<div class="panel-heading text-center"><strong>Bugs List</strong></div>
+	<div class="panel-body">
+		<button ng-click="addData()">Add Data</button> : 
+		Bug name
+		<input type="text" ng-model="name"> : 
+		Description
+		<input type="text" ng-model="description" size="50">
+	</div>
+	<table class="table table-bordered table-hover" ng-show="bugs.length">
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>NAME</th>
+				<th>DESCRIPTION</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="bug in bugs">
+				<td>{{bug.id}}</td>
+				<td>{{bug.name}}</td>
+				<td>{{bug.description}}</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<hr>
+

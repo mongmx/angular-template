@@ -1,2 +1,31 @@
 <h1>{{title}}</h1>
 <h3>{{title}} Page</h3>
+<hr>
+<div class="row">
+	<div class="col-xs-12">
+		<button type="button" class="btn btn-primary" ng-model="singleModel" uib-btn-checkbox btn-checkbox-true="1" btn-checkbox-false="0">
+			Single Toggle
+		</button>
+	</div>
+</div>
+<hr>
+<div class="row">
+	<div class="col-xs-12">
+		<div class="btn-group">
+			<label class="btn btn-info" ng-model="checkModel.left" uib-btn-checkbox>Left</label>
+			<label class="btn btn-info" ng-model="checkModel.middle" uib-btn-checkbox>Middle</label>
+			<label class="btn btn-info" ng-model="checkModel.right" uib-btn-checkbox>Right</label>
+		</div>
+	</div>
+</div> 
+<hr>
+<div class="row">
+	<div class="col-xs-12">
+		<div class="btn-group">
+			<label class="btn btn-default" ng-model="radioModel" uib-btn-radio="'Left'">Left</label>
+			<label class="btn btn-default" ng-model="radioModel" uib-btn-radio="'Middle'">Middle</label>
+			<label class="btn btn-default" ng-model="radioModel" uib-btn-radio="'Right'">Right</label>
+		</div>
+	</div>
+</div>
+<hr>

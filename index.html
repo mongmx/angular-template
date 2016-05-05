@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="theAppName">
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Title Page</title>
+		<title>{{appName}}</title>
 
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<link rel="stylesheet" href="public/components/bootstrap/dist/css/bootstrap.css">
 		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 		<!--[if lt IE 9]>
@@ -17,8 +17,7 @@
 		<link rel="stylesheet" type="text/css" href="public/css/style.css">
 	</head>
 	<body>
-		
-		<div class="container" ng-app="theAppName" ng-controller="MainController">
+		<div class="container" ng-controller="MainController">
 			<header ng-include="'templates/nav.html'"></header>
 			<div ui-view></div>
 			<footer ng-include="'templates/footer.html'"></footer>
@@ -26,11 +25,13 @@
 
 		<script src="public/components/angular/angular.js"></script>
 		<script src="public/components/angular-ui-router/release/angular-ui-router.js"></script>
+		<script src="public/components/angular-bootstrap/ui-bootstrap.js"></script>
 		<script src="public/components/jquery/dist/jquery.js"></script>
 
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+		<script src="public/components/bootstrap/dist/js/bootstrap.js"></script>
 
 		<script src="public/js/about.js"></script>
+		<script src="public/js/bug.js"></script>
 		<script src="public/js/contact.js"></script>
 		<script src="public/js/home.js"></script>
 		<script src="public/js/app.js"></script>
